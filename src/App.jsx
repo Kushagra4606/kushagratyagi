@@ -10,7 +10,6 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 
 function App() {
-  // Intersection Observer for fade-in animations on scroll
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

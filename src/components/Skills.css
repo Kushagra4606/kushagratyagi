@@ -1,47 +1,57 @@
 .skills-section {
-  background-color: var(--bg-primary);
-  position: relative;
+  background-color: var(--bg-secondary);
 }
 
-.skills-layout {
+.skills-list {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 32px;
 }
 
-.skill-category {
+.skill-row {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  gap: 24px;
+  align-items: baseline;
 }
 
-.category-title {
-  font-size: 1rem;
+.skill-category-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-weight: 600;
+  min-width: 140px;
+  flex-shrink: 0;
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
 }
 
 .skill-tag {
-  padding: 10px 20px;
-  background: var(--surface-1);
+  padding: 6px 14px;
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border-radius: 2px;
   color: var(--text-primary);
-  font-size: 0.95rem;
-  transition: all var(--transition-fast);
-  cursor: default;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: border-color var(--transition-fast);
 }
 
 .skill-tag:hover {
-  background: var(--surface-2);
-  border-color: var(--text-secondary);
-  transform: translateY(-2px);
+  border-color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .skill-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .skill-category-title {
+    min-width: auto;
+  }
 }

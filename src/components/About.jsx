@@ -1,34 +1,27 @@
 import React from 'react';
-import { Terminal, Layout, Server, Cpu, Database, Settings } from 'lucide-react';
 import './About.css';
 
 const About = () => {
   const focusAreas = [
-    { title: 'Java Ecosystem', icon: <Terminal size={24} />, desc: 'Deep expertise in core Java and enterprise applications.' },
-    { title: 'Spring Boot', icon: <Settings size={24} />, desc: 'Building robust, scalable REST APIs and microservices.' },
-    { title: 'Backend Engineering', icon: <Server size={24} />, desc: 'Architecting high-performance server-side solutions.' },
-    { title: 'System Design', icon: <Cpu size={24} />, desc: 'Designing scalable, distributed architectures.' },
-    { title: 'Full Stack Dev', icon: <Layout size={24} />, desc: 'Connecting complex backends to modern React frontends.' },
-    { title: 'Problem Solving', icon: <Database size={24} />, desc: 'Algorithmic thinking and optimizing database schemas.' }
+    { title: 'Java Ecosystem', desc: 'Core Java, enterprise applications, and JVM internals.' },
+    { title: 'Spring Boot', desc: 'REST APIs, microservices, Spring Security, Hibernate.' },
+    { title: 'Backend Engineering', desc: 'High-performance server-side solutions and architecture.' },
+    { title: 'System Design', desc: 'Scalable, distributed systems and data modeling.' },
+    { title: 'Full Stack Dev', desc: 'React frontends connected to complex Java backends.' },
+    { title: 'Problem Solving', desc: '300+ LeetCode problems. Algorithmic thinking.' }
   ];
 
   return (
     <section className="section about-section" id="about">
       <div className="container">
-        <h2 className="section-title fade-on-scroll">Engineering Focus</h2>
+        <p className="section-label">About</p>
+        <h2 className="section-title fade-on-scroll">What I Work On</h2>
         
-        <div className="focus-grid">
+        <div className="about-grid">
           {focusAreas.map((area, index) => (
-            <div 
-              className="focus-card glass-panel fade-on-scroll" 
-              key={index}
-              style={{transitionDelay: `${index * 50}ms`}}
-            >
-              <div className="focus-icon-wrapper">
-                {area.icon}
-              </div>
-              <h3 className="focus-title">{area.title}</h3>
-              <p className="focus-desc">{area.desc}</p>
+            <div className="about-card fade-on-scroll" key={index}>
+              <h3 className="about-card-title">{area.title}</h3>
+              <p className="about-card-desc">{area.desc}</p>
             </div>
           ))}
         </div>

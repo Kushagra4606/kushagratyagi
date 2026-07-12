@@ -1,53 +1,56 @@
 .education-section {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
 }
 
 .edu-card {
-  padding: 32px;
-  border-radius: 12px;
-}
-
-.edu-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 28px;
+  border: 1px solid var(--border-color);
   gap: 24px;
 }
 
-.edu-title-group {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
 .edu-degree {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .edu-school {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
   font-weight: 400;
 }
 
 .edu-meta {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
 }
 
 .edu-year {
+  font-size: 0.8rem;
   color: var(--text-tertiary);
-  font-family: monospace;
-  font-size: 0.9rem;
+}
+
+.edu-gpa {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {
-  .edu-header {
+  .edu-card {
     flex-direction: column;
+    gap: 12px;
+  }
+  .edu-meta {
     align-items: flex-start;
+    flex-direction: row;
+    gap: 16px;
   }
 }

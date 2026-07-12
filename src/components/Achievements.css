@@ -1,48 +1,44 @@
 .achievements-section {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
 }
 
 .achievements-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0;
 }
 
-.achievement-item {
+.achievement-row {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  background: var(--surface-1);
-  border: 1px solid var(--border-color);
-  padding: 24px;
-  border-radius: 8px;
-  transition: transform var(--transition-fast), background var(--transition-fast);
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.achievement-item:hover {
-  transform: translateX(10px);
-  background: var(--surface-2);
+.achievement-row:last-child {
+  border-bottom: none;
 }
 
-.achievement-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--surface-2);
-  border-radius: 8px;
-  color: var(--accent-purple);
+.achievement-marker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  min-width: 28px;
   flex-shrink: 0;
+  padding-top: 2px;
 }
 
 .achievement-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .achievement-desc {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
+  line-height: 1.6;
 }

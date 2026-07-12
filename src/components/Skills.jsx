@@ -24,12 +24,13 @@ const Skills = () => {
   return (
     <section className="section skills-section" id="skills">
       <div className="container">
-        <h2 className="section-title fade-on-scroll">Technical Arsenal</h2>
+        <p className="section-label">Skills</p>
+        <h2 className="section-title fade-on-scroll">Technical Stack</h2>
         
-        <div className="skills-layout">
+        <div className="skills-list">
           {skillCategories.map((category, idx) => (
-            <div className="skill-category fade-on-scroll" key={idx} style={{transitionDelay: `${idx * 100}ms`}}>
-              <h3 className="category-title">{category.title}</h3>
+            <div className="skill-row fade-on-scroll" key={idx}>
+              <h3 className="skill-category-title">{category.title}</h3>
               <div className="skill-tags">
                 {category.skills.map((skill, sIdx) => (
                   <span className="skill-tag" key={sIdx}>{skill}</span>

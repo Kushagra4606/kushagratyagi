@@ -1,26 +1,21 @@
 import React from 'react';
-import { GraduationCap } from 'lucide-react';
 import './Education.css';
 
 const Education = () => {
   return (
     <section className="section education-section">
       <div className="container">
-        <h2 className="section-title fade-on-scroll">Education</h2>
+        <p className="section-label">Education</p>
+        <h2 className="section-title fade-on-scroll">Academic Background</h2>
         
-        <div className="edu-card glass-panel fade-on-scroll">
-          <div className="edu-header">
-            <div className="edu-title-group">
-              <GraduationCap size={24} className="text-blue" />
-              <div>
-                <h3 className="edu-degree">B.Tech Computer Science</h3>
-                <h4 className="edu-school">Noida Institute of Engineering and Technology</h4>
-              </div>
-            </div>
-            <div className="edu-meta">
-              <span className="edu-year">2024 - 2028</span>
-              <span className="edu-gpa badge">CGPA: 7.7</span>
-            </div>
+        <div className="edu-card fade-on-scroll">
+          <div className="edu-main">
+            <h3 className="edu-degree">B.Tech Computer Science</h3>
+            <p className="edu-school">Noida Institute of Engineering and Technology</p>
+          </div>
+          <div className="edu-meta">
+            <span className="edu-year mono">2024 — 2028</span>
+            <span className="edu-gpa mono">CGPA: 7.7</span>
           </div>
         </div>
       </div>
