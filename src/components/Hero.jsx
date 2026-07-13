@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, ArrowDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import './Hero.css';
+import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   return (
@@ -10,9 +11,7 @@ const Hero = () => {
 
         <div className="hero-photo-area">
           <div className="photo-placeholder">
-            {/* Replace src with your photo path */}
-            <span className="photo-initials">KT</span>
-            <p className="photo-hint">Add your photo here</p>
+            <img src={profileImg} alt="Kushagra Tyagi" className="profile-img" />
           </div>
         </div>
 
@@ -43,7 +42,7 @@ const Hero = () => {
             <a href="#projects" className="btn-primary">
               View Projects <ArrowDown size={16} />
             </a>
-            <a href="#" className="btn-outline">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-outline">
               Resume
             </a>
           </div>
